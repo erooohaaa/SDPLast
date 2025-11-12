@@ -1,4 +1,11 @@
 package model;
 
-public class Wolf {
+import visitor.AnimalVisitor;
+
+public class Wolf implements Animal {
+    @Override
+    public void accept (AnimalVisitor visitor){
+        visitor.visit(this);
+    }
+
 }
