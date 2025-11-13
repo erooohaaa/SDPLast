@@ -22,10 +22,9 @@ public class WolfBuilder implements AnimalBuilder {
         this.weight=weight;
         return this;
     }
-    @Override
-    public Animal build(){
-        Wolf wolf = new Wolf();
-        return wolf;
-    }
 
+    @Override
+    public Animal build() {
+        return new Wolf(name, age, weight);
+    }
 }

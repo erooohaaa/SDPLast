@@ -14,6 +14,6 @@ public class Cleaner implements AnimalVisitor{
     }
     @Override
     public void visit(Wolf wolf){
-        System.out.println("Cleaner: Cleaning monkey enclosure, removing banana peels");
+        System.out.println("Cleaner: Cleaning wolf cage, changing water");
     }
 }

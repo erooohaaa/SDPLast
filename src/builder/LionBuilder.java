@@ -22,10 +22,10 @@ public class LionBuilder implements AnimalBuilder {
         this.weight=weight;
         return this;
     }
+
     @Override
-    public Animal build(){
-        Lion lion = new  Lion();
-        return lion;
+    public Animal build() {
+        return new Lion(name, age, weight);
     }
 
 }

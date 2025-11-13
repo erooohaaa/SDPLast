@@ -3,7 +3,15 @@ package model;
 import visitor.AnimalVisitor;
 
 public class Lion implements Animal{
-
+    private String name;
+    private int age;
+    private double weight;
+    public Lion() {}
+    public Lion(String name, int age, double weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
     @Override
     public void accept(AnimalVisitor visitor) {
         visitor.visit(this);
