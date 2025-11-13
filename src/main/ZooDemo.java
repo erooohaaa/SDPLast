@@ -4,7 +4,7 @@ import collection.ZooCollection;
 import model.*;
 import visitor.*;
 public class ZooDemo {
-    public void run(){
+    public void runPoBratski(){
         ZooCollection zoo = new ZooCollection();
         Animal lion = new LionBuilder()
                 .setName("Simba")
@@ -15,11 +15,11 @@ public class ZooDemo {
         Animal monkey = new MonkeyBuilder()
                 .setName("George")
                 .setAge(3)
-                .setWeight(35.2)
+                .setWeight(35.21)
                 .build();
 
         Animal wolf = new WolfBuilder()
-                .setName("Akela")
+                .setName("Bobik")
                 .setAge(7)
                 .setWeight(80.7)
                 .build();
@@ -29,14 +29,11 @@ public class ZooDemo {
         AnimalVisitor cleaner = new Cleaner();
         AnimalVisitor trainer = new Trainer();
         AnimalVisitor vet = new Veterinarian();
-
-        System.out.println("=== Cleaner visiting animals ===");
+        System.out.println("Cleaner visiting animals");
         zoo.acceptAll(cleaner);
-
-        System.out.println("\n=== Trainer visiting animals ===");
+        System.out.println("Trainer visiting animals");
         zoo.acceptAll(trainer);
-
-        System.out.println("\n=== Veterinarian visiting animals ===");
+        System.out.println("Veterinarian visiting animals");
         zoo.acceptAll(vet);
     }
 
