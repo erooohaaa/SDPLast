@@ -16,5 +16,8 @@ public class Monkey implements Animal {
     @Override
     public void accept (AnimalVisitor visitor) {
         visitor.visit(this);    }
-
+    @Override
+    public String toString() {
+        return name + " (age " + age + ", " + weight + " kg)";
+    }
 }

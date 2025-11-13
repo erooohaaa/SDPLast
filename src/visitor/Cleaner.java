@@ -5,7 +5,7 @@ public class Cleaner implements AnimalVisitor{
 
     @Override
     public void visit(Lion lion){
-        System.out.println("Cleaner: Cleaning lion cage, changing water");
+        System.out.println("Cleaner: Cleaning for lion " + lion + "cage, changing water");
     }
 
     @Override
