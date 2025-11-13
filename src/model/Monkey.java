@@ -6,7 +6,7 @@ public class Monkey implements Animal {
     private String name;
     private int age;
     private double weight;
-    public Monkey() {}
+
     public Monkey(String name, int age, double weight) {
         this.name = name;
         this.age = age;
@@ -18,6 +18,6 @@ public class Monkey implements Animal {
         visitor.visit(this);    }
     @Override
     public String toString() {
-        return name + " (age " + age + ", " + weight + " kg)";
+        return name + " (age " + age + ", " + weight + " kg )";
     }
 }
